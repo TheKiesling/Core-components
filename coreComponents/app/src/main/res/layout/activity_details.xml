@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_DetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <!-- ************************* LYT-GUIDELINE ************************* -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/layout_detailsActivity_guidelineHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- ************************* TXT-PLACENAME ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:padding="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_detailsActivity_guidelineHeader" />
+
+    <!-- ************************* TXT-PLACEADDRESS ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placeAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:padding="4dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeName" />
+
+    <!-- ************************* BTN-STARTVISIT ************************* -->
+    <Button
+        android:id="@+id/button_detailsActivity_startVisit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/iniciar_visita"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeAddress" />
+
+    <!-- ************************* LYT-MAPS ************************* -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_detailsActivity_maps"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_detailsActivity_startVisit">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ************************* TXT-PLACEINFORMATION ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placeInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/informacion_adicional"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_detailsActivity_maps" />
+
+    <!-- ************************* IMG-SCHEDULE ************************* -->
+    <ImageView
+        android:id="@+id/image_detailsActivity_schedulePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_schedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeInformation" />
+
+    <!-- ************************* TXT-PLACESCHEDULETITLE ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placeScheduleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/horario_atencion"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_schedulePlace"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeInformation" />
+
+    <!-- ************************* TXT-PLACESCHEDULE ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placeSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_schedulePlace"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeScheduleTitle" />
+
+    <!-- ************************* IMG-PHONE ************************* -->
+    <ImageView
+        android:id="@+id/image_detailsActivity_phonePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_detailsActivity_schedulePlace" />
+
+    <!-- ************************* TXT-PLACEPHONETITLE ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placePhoneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/titulo_telefono"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_phonePlace"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeSchedule" />
+
+    <!-- ************************* TXT-PLACESCHEDULE ************************* -->
+    <TextView
+        android:id="@+id/text_detailsActivity_placePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefono"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_phonePlace"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placePhoneTitle" />
+
+    <Button
+        android:id="@+id/button_detailsActivity_call"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:padding="8dp"
+        android:text="@string/llamar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/sky_blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeSchedule" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
